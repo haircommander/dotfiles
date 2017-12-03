@@ -34,6 +34,9 @@ set softtabstop=4
 set shiftwidth=4
 set expandtab
 
+" NO WRAP " 
+set nowrap
+
 " CAPSLOCK "
 au VimEnter * !xmodmap -e 'clear Lock' -e 'keycode 0x42 = Escape'
 au VimLeave * !xmodmap -e 'clear Lock' -e 'keycode 0x42 = Caps_Lock'
