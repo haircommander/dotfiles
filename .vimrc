@@ -27,6 +27,12 @@ syntax enable
 set background=dark
 colorscheme monokai
 
+" CAPITAL LETTERS ALLOWED " 
+command WQ wq
+command Wq wq
+command W w
+command Q q
+
 " TAB STOP "
 set nohlsearch
 set tabstop=4
