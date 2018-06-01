@@ -118,12 +118,12 @@ fi
 
 export PATH=${PATH}:/home/haircommander/android-sdk-linux_x86/platform-tools
 
-export PATH="$PATH:$HOME/npm/bin"
-export NODE_PATH="$NODE_PATH:$HOME/npm/lib/node_modules"
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
-export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"
-export PATH="$HOME/texlive2016:$PATH"
+# export PATH="$PATH:$HOME/npm/bin"
+# export NODE_PATH="$NODE_PATH:$HOME/npm/lib/node_modules"
+# export PATH="$HOME/.rbenv/bin:$PATH"
+# eval "$(rbenv init -)"
+# export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"
+# export PATH="$HOME/texlive2016:$PATH"
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
@@ -132,3 +132,4 @@ export PATH="/usr/local/heroku/bin:$PATH"
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
+alias config='/usr/bin/git --git-dir=/home/pehunt/.cfg/ --work-tree=/home/pehunt'
