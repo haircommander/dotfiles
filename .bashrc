@@ -116,14 +116,12 @@ if ! shopt -oq posix; then
   fi
 fi
 
-export PATH=${PATH}:/home/haircommander/android-sdk-linux_x86/platform-tools
+# User specific aliases and functions
+# alias cd_or='cd ~/aos/src/github.com/openshift/origin'
 
-# export PATH="$PATH:$HOME/npm/bin"
-# export NODE_PATH="$NODE_PATH:$HOME/npm/lib/node_modules"
-# export PATH="$HOME/.rbenv/bin:$PATH"
-# eval "$(rbenv init -)"
-# export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"
-# export PATH="$HOME/texlive2016:$PATH"
+export GOPATH=/home/pehunt/go
+# export PATH=$GOPATH/bin:$PATH:$HOME/.local/bin:$HOME/bin
+
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
@@ -133,3 +131,41 @@ if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
 alias config='/usr/bin/git --git-dir=/home/pehunt/.cfg/ --work-tree=/home/pehunt'
+
+
+
+## From NHR
+# Helper function for our fancy prompt.
+function parse_git_branch {
+  git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
+}
+ 
+# Fancy prompt function
+function proml {
+  local        BLUE="\[\033[0;34m\]"
+  local         RED="\[\033[0;31m\]"
+  local   LIGHT_RED="\[\033[1;31m\]"
+  local       GREEN="\[\033[0;32m\]"
+  local LIGHT_GREEN="\[\033[1;32m\]"
+  local       WHITE="\[\033[1;37m\]"
+  local  LIGHT_GRAY="\[\033[0;37m\]"
+  local       BLACK="\[\033[0;30m\]"
+  local       RESET="\[\e[0m\]"
+ 
+  case $TERM in
+    xterm*)
+    TITLEBAR='\[\033]0;\u@\h:\w\007\]'
+    ;;
+    *)
+    TITLEBAR=""
+    ;;
+  esac
+ 
+  PS1="[$BLUE\u@\h $GREEN\W$RED\$(parse_git_branch)${RESET}]\n \$ "
+  PS2='> '
+  PS4='+ '
+}
+ 
+# Call the fancy prompt function
+proml
+    
