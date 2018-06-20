@@ -122,7 +122,6 @@ if [ -f ~/.bash_aliases ]; then
 fi
 
 
-
 ## From NHR
 # Helper function for our fancy prompt.
 function parse_git_branch {
@@ -157,4 +156,3 @@ function proml {
  
 # Call the fancy prompt function
 proml
-    
