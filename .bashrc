@@ -116,21 +116,10 @@ if ! shopt -oq posix; then
   fi
 fi
 
-# User specific aliases and functions
-# alias cd_or='cd ~/aos/src/github.com/openshift/origin'
-
-export GOPATH=/home/pehunt/go
-# export PATH=$GOPATH/bin:$PATH:$HOME/.local/bin:$HOME/bin
-
-
-### Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
-
 # ALIASES
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
-alias config='/usr/bin/git --git-dir=/home/pehunt/.cfg/ --work-tree=/home/pehunt'
 
 
 
