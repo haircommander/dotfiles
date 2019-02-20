@@ -6,8 +6,8 @@ alias vim='gvim -vp'
 alias vi='gvim -vp'
 alias gopath='export GOPATH=/home/pehunt/go'
 alias mmi='make && make install'
-alias cdlibpod='cd /home/pehunt/go/src/github.com/containers/libpod'
-alias cdcrio='cd /home/pehunt/go/src/github.com/kubernetes-sigs/cri-o'
+alias cdlibpod='cd $HOME/go/src/github.com/containers/libpod'
+alias cdcrio='cd $HOME/go/src/github.com/kubernetes-sigs/cri-o'
 spk() {
     espeak "$@"
 }
