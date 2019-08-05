@@ -34,11 +34,15 @@ command W w
 command Q q
 
 " TAB STOP "
-set nohlsearch
+" set nohlsearch
+" set tabstop=4
+" set softtabstop=4
+" set shiftwidth=4
+" set expandtab
+set autoindent
+set noexpandtab
 set tabstop=4
-set softtabstop=4
 set shiftwidth=4
-set expandtab
 
 " NO WRAP " 
 set nowrap
