@@ -39,3 +39,4 @@ function cp_to_bastion() {
 
 alias sshpi='ssh pehunt@10.0.0.5'
 alias log_between_tags='git diff --pretty=oneline $1..$2'
+alias export-clusterbot-kubeconfig='dir=~/Downloads/; export KUBECONFIG=$dir/$(ls $dir | grep cluster-bot | tail -1)'
