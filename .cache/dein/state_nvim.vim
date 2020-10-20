@@ -1,0 +1,10 @@
+if g:dein#_cache_version !=# 150 || g:dein#_init_runtimepath !=# '/home/pehunt/.vim,/home/pehunt/.var/app/io.neovim.nvim/config/nvim,/app/etc/xdg/nvim,/etc/xdg/nvim,/home/pehunt/.var/app/io.neovim.nvim/data/nvim/site,/app/share/nvim/site,/usr/share/nvim/site,/usr/share/runtime/share/nvim/site,/run/host/user-share/nvim/site,/run/host/share/nvim/site,/app/share/nvim/runtime,/run/host/share/nvim/site/after,/run/host/user-share/nvim/site/after,/usr/share/runtime/share/nvim/site/after,/usr/share/nvim/site/after,/app/share/nvim/site/after,/home/pehunt/.var/app/io.neovim.nvim/data/nvim/site/after,/etc/xdg/nvim/after,/app/etc/xdg/nvim/after,/home/pehunt/.var/app/io.neovim.nvim/config/nvim/after,/home/pehunt/.vim/after,/home/pehunt/.cache/dein/repos/github.com/Shougo/dein.vim' | throw 'Cache loading error' | endif
+let [plugins, ftplugin] = dein#load_cache_raw(['/home/pehunt/.var/app/io.neovim.nvim/config/nvim/init.vim'])
+if empty(plugins) | throw 'Cache loading error' | endif
+let g:dein#_plugins = plugins
+let g:dein#_ftplugin = ftplugin
+let g:dein#_base_path = '/home/pehunt/.cache/dein'
+let g:dein#_runtime_path = '/home/pehunt/.cache/dein/.cache/init.vim/.dein'
+let g:dein#_cache_path = '/home/pehunt/.cache/dein/.cache/init.vim'
+let &runtimepath = '/home/pehunt/.vim,/home/pehunt/.var/app/io.neovim.nvim/config/nvim,/app/etc/xdg/nvim,/etc/xdg/nvim,/home/pehunt/.var/app/io.neovim.nvim/data/nvim/site,/app/share/nvim/site,/usr/share/nvim/site,/usr/share/runtime/share/nvim/site,/run/host/user-share/nvim/site,/run/host/share/nvim/site,/home/pehunt/.cache/dein/repos/github.com/Shougo/dein.vim,/home/pehunt/.cache/dein/.cache/init.vim/.dein,/app/share/nvim/runtime,/home/pehunt/.cache/dein/.cache/init.vim/.dein/after,/run/host/share/nvim/site/after,/run/host/user-share/nvim/site/after,/usr/share/runtime/share/nvim/site/after,/usr/share/nvim/site/after,/app/share/nvim/site/after,/home/pehunt/.var/app/io.neovim.nvim/data/nvim/site/after,/etc/xdg/nvim/after,/app/etc/xdg/nvim/after,/home/pehunt/.var/app/io.neovim.nvim/config/nvim/after,/home/pehunt/.vim/after'
+filetype off
