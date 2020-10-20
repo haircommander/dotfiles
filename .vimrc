@@ -21,12 +21,6 @@ nmap <C-\>f :cs find f =expand("")
 nmap <C-\>i :cs find i ^=expand("")$
 nmap <C-\>d :cs find d =expand("")
 
-" My commands
-" SUBLIME COLOR "
-syntax enable
-set background=dark
-colorscheme monokai
-
 " CAPITAL LETTERS ALLOWED " 
 command WQ wq
 command Wq wq
@@ -49,10 +43,6 @@ set sidescroll=1
 set nowrap
 
 " CLIPBOARD "
-
-" CAPSLOCK "
-au VimEnter * !xmodmap -e 'clear Lock' -e 'keycode 0x42 = Escape'
-au VimLeave * !xmodmap -e 'clear Lock' -e 'keycode 0x42 = Caps_Lock'
 
 " TAB COMPLETE "
 function! Smart_TabComplete()
@@ -84,19 +74,29 @@ endif
 " Add the dein installation directory into runtimepath
 set runtimepath+=~/.cache/dein/repos/github.com/Shougo/dein.vim
 
-if dein#load_state('~/.cache/dein')
-  call dein#begin('~/.cache/dein')
+call dein#begin(expand('~/.cache/dein'))
 
-  call dein#add('~/.cache/dein/repos/github.com/Shougo/dein.vim')
-  call dein#add('Shougo/deoplete.nvim')
-  if !has('nvim')
-    call dein#add('roxma/nvim-yarp')
-    call dein#add('roxma/vim-hug-neovim-rpc')
-  endif
-
-  call dein#end()
-  call dein#save_state()
+call dein#add('~/.cache/dein/repos/github.com/Shougo/dein.vim')
+call dein#add('Shougo/deoplete.nvim')
+if !has('nvim')
+  call dein#add('roxma/nvim-yarp')
+  call dein#add('roxma/vim-hug-neovim-rpc')
 endif
+call dein#add('preservim/nerdtree')
+call dein#add('vim-airline/vim-airline')
+
+call dein#end()
+call dein#save_state()
 
 filetype plugin indent on
 syntax enable
+
+" SUBLIME COLOR "
+syntax enable
+set background=dark
+colorscheme monokai
+
+map <F5> :NERDTreeToggle<CR>
+" CAPSLOCK "
+au VimEnter * !xmodmap -e 'clear Lock' -e 'keycode 0x42 = Escape'
+au VimLeave * !xmodmap -e 'clear Lock' -e 'keycode 0x42 = Caps_Lock'
