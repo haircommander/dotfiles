@@ -43,6 +43,7 @@ set autoindent
 set noexpandtab
 set tabstop=4
 set shiftwidth=4
+set sidescroll=1
 
 " NO WRAP " 
 set nowrap

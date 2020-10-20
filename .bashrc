@@ -89,7 +89,7 @@ fi
 
 export GOPATH=/home/pehunt/go
 # export GOROOT=/usr/local/go
-export PATH=$PATH:$GOPATH/bin #:$GOROOT/bin
+export PATH=$PATH:$GOPATH/bin:/var/lib/flatpak/exports/bin
 
 # some more ls aliases
 alias ll='ls -alF'
