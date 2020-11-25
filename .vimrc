@@ -84,6 +84,8 @@ if !has('nvim')
 endif
 call dein#add('preservim/nerdtree')
 call dein#add('vim-airline/vim-airline')
+call dein#add('fatih/vim-go')
+" run `:call dein#install()`
 
 call dein#end()
 call dein#save_state()
@@ -97,6 +99,6 @@ set background=dark
 colorscheme monokai
 
 map <F5> :NERDTreeToggle<CR>
-" CAPSLOCK "
-au VimEnter * !xmodmap -e 'clear Lock' -e 'keycode 0x42 = Escape'
-au VimLeave * !xmodmap -e 'clear Lock' -e 'keycode 0x42 = Caps_Lock'
+
+" ref: https://github.com/airblade/vim-gitgutter#getting-started
+set updatetime=100
