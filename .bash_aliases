@@ -2,8 +2,8 @@
 alias ccm='clear && clear && make'
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 alias yget='youtube-dl -f bestaudio'
-alias vim='io.neovim.nvim'
-alias vi='io.neovim.nvim'
+alias vim='nvim -p'
+alias vi='nvim -p'
 alias gopath='export GOPATH=/home/pehunt/go'
 alias mmi='make && make install'
 alias cdlibpod='cd $HOME/go/src/github.com/containers/libpod'
@@ -40,5 +40,5 @@ function cp_to_bastion() {
 alias sshpi='ssh pehunt@10.0.0.5'
 alias log_between_tags='git diff --pretty=oneline $1..$2'
 alias export-clusterbot-kubeconfig='dir=~/Downloads/; export KUBECONFIG=$dir/$(ls $dir | grep cluster-bot | tail -1)'
-alias sshvm="ssh root@$(sudo virsh domifaddr fedora32 | grep ipv4 | awk '{ printf $4 }')"
-alias replace_selinux="ed -i 's/Enable selinux support (default: true)/Enable selinux support (default: false)/g' completions/fish/crio.fish docs/crio.8.md"
+alias sshvm="ssh -o IdentitiesOnly=yes -p 22222 root@localhost"
+alias replace_selinux="sed -i 's/Enable selinux support (default: true)/Enable selinux support (default: false)/g' completions/fish/crio.fish docs/crio.8.md"
