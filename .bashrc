@@ -90,6 +90,7 @@ fi
 export GOPATH=/home/pehunt/go
 # export GOROOT=/usr/local/go
 export PATH=$PATH:$GOPATH/bin:/var/lib/flatpak/exports/bin
+export GIT_EDITOR=vi
 
 # some more ls aliases
 alias ll='ls -alF'
@@ -157,6 +158,18 @@ function proml {
   PS2='> '
   PS4='+ '
 }
+
+function prom_cmd {
+	GIT_ROOT=$(git rev-parse --show-toplevel 2>/dev/null);
+	if [ -z "$GIT_ROOT" ]; then
+		basename $PWD
+	else
+		basename "$GIT_ROOT"
+	fi
+}
+
  
 # Call the fancy prompt function
 proml
+
+PROMPT_COMMAND='echo -ne "\033]0;$(prom_cmd)\007"'
