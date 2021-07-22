@@ -173,3 +173,4 @@ function prom_cmd {
 proml
 
 PROMPT_COMMAND='echo -ne "\033]0;$(prom_cmd)\007"'
+export GOOGLE_APPLICATION_CREDENTIALS="$HOME/openshift/aos-serviceaccount.json"

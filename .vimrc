@@ -102,3 +102,4 @@ map <F5> :NERDTreeToggle<CR>
 
 " ref: https://github.com/airblade/vim-gitgutter#getting-started
 set updatetime=100
+set mmp=5000
