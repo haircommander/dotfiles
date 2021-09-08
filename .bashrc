@@ -154,7 +154,7 @@ function proml {
     ;;
   esac
  
-  PS1="[$BLUE\u@\h $GREEN\W$RED\$(parse_git_branch)${RESET}]\n \$ "
+  PS1="[$BLUE\u@\h $GREEN\W$RED\$(parse_git_branch)${RESET}]\n # "
   PS2='> '
   PS4='+ '
 }
