@@ -162,7 +162,7 @@ function proml {
 function prom_cmd {
 	GIT_ROOT=$(git rev-parse --show-toplevel 2>/dev/null);
 	if [ -z "$GIT_ROOT" ]; then
-		basename $PWD
+		basename "$PWD"
 	else
 		basename "$GIT_ROOT"
 	fi
@@ -174,3 +174,4 @@ proml
 
 PROMPT_COMMAND='echo -ne "\033]0;$(prom_cmd)\007"'
 export GOOGLE_APPLICATION_CREDENTIALS="$HOME/openshift/aos-serviceaccount.json"
+. "$HOME/.cargo/env"

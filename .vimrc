@@ -85,6 +85,7 @@ endif
 call dein#add('preservim/nerdtree')
 call dein#add('vim-airline/vim-airline')
 call dein#add('fatih/vim-go')
+call dein#add('rust-lang/rust.vim')
 " run `:call dein#install()`
 
 call dein#end()
