@@ -89,7 +89,7 @@ fi
 
 export GOPATH=/home/pehunt/go
 # export GOROOT=/usr/local/go
-export PATH=$PATH:$GOPATH/bin:/var/lib/flatpak/exports/bin
+export PATH=$PATH:$GOPATH/bin:/var/lib/flatpak/exports/bin:/usr/local/go/bin
 export GIT_EDITOR=vi
 
 # some more ls aliases
@@ -175,3 +175,9 @@ proml
 PROMPT_COMMAND='echo -ne "\033]0;$(prom_cmd)\007"'
 export GOOGLE_APPLICATION_CREDENTIALS="$HOME/openshift/aos-serviceaccount.json"
 . "$HOME/.cargo/env"
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/tmp/google-cloud-sdk/path.bash.inc' ]; then . '/tmp/google-cloud-sdk/path.bash.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/tmp/google-cloud-sdk/completion.bash.inc' ]; then . '/tmp/google-cloud-sdk/completion.bash.inc'; fi

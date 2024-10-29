@@ -17,7 +17,7 @@ alias deploy_bastion='curl https://raw.githubusercontent.com/eparis/ssh-bastion/
 alias print_bastion="oc get service -n openshift-ssh-bastion ssh-bastion -o jsonpath='{.status.loadBalancer.ingress[0].hostname}'"
 alias changelog='git log --no-merges --format="  * %s"'
 alias vendor_in_container='podman run --privileged --rm --env HOME=/root    -v `pwd`:/src -w /src docker.io/library/golang:1.13 make vendor'
-alias backup='sudo rsync -aAXv / --exclude={"/sysroot/*","/usr/*","/dev/*","/proc/*","/sys/*","/tmp/*","/run/*","/mnt/*","/media/*","/lost+found","*cache/*"} /mnt/$(date  "+work-%d-%m-%Y")'
+alias backup='sudo rsync -aAXv /var/home/ --exclude={"/sysroot/*","/usr/*","/dev/*","/proc/*","/sys/*","/tmp/*","/run/*","/mnt/*","/media/*","/lost+found","*cache/*"} /mnt/$(date  "+work-%d-%m-%Y")'
 spk() {
     espeak "$@"
 }
